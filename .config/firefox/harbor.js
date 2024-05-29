@@ -1,0 +1,16 @@
+user_pref("browser.urlbar.quicksuggest.enabled", false);
+user_pref("browser.urlbar.suggest.topsites", false);
+user_pref("browser.urlbar.suggest.history", false);
+user_pref("signon.prefillForms", false);
+user_pref("browser.urlbar.autoFill", false);
+user_pref("keyword.enabled", true);
+user_pref("dom.security.https_only_mode", false);
+user_pref("network.cookie.lifetimePolicy", 0);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+user_pref("dom.push.enabled", false);
+user_pref("extensions.pocket.enabled", false);
+user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("network.http.referer.XOriginPolicy", 0);
+user_pref("identity.fxaccounts.enabled", false);
+user_pref("ui.context_menus.after_mouseup", true);
