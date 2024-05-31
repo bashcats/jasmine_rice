@@ -1,9 +1,7 @@
 #!/bin/sh
 
-xrandr --dpi 96
-
-setbg &
-#xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
+xrandr --dpi 96	
+setbg &	
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
 
@@ -11,5 +9,4 @@ for program in $autostart; do
 	pidof -sx "$program" || "$program" &
 done >/dev/null 2>&1
 
-# Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"

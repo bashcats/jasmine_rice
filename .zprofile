@@ -1,6 +1,8 @@
 #!/bin/sh
 # shellcheck disable=SC2155
 
+# Profile file, runs on login. Environmental variables are set here.
+
 # Add all directories in `~/.local/bin` to $PATH
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
@@ -21,7 +23,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+#export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
@@ -57,14 +59,16 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
-export QT_QPA_PLATFORMTHEME="gtk2"
-export MOZ_USE_XINPUT2=1
-export AWT_TOOLKIT="MToolkit wmname LG3D"
-export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME="gtk2"        # Have QT use gtk2 theme.
+export MOZ_USE_XINPUT2=1                  # Mozilla smooth scrolling/touchpads.
+export AWT_TOOLKIT="MToolkit wmname LG3D" # May have to install wmname
+export _JAVA_AWT_WM_NONREPARENTING=1      # Fix for Java applications in dwm
 
 [ ! -f "$XDG_CONFIG_HOME/shell/shortcutrc" ] && setsid -f shortcuts >/dev/null 2>&1
 
+# Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
 
-xmodmap "$XDG_CONFIG_HOME/keeb/spacexmodmap" 2>/dev/null
-
+# Switch escape and caps if tty and no passwd required:
+# sudo -n loadkeys "$XDG_DATA_HOME/harbor/ttymaps.kmap" 2>/dev/null
+xmodmap $XDG_CONFIG_HOME/keeb/spacexmodmap
