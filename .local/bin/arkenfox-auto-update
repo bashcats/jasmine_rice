@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Run by a pacman hook set up. The user should not have to run this manually.
+# A wrapper for the arkenfox-updater that runs it on all pre-existing Arkenfox
+# user.js files on the machine.
 
-# Search for all Firefox and Librewolf profiles using Arkenfox.
 profiles="$(grep -sH "arkenfox user.js" \
 	/home/*/.librewolf/*.default-release/user.js \
 	/home/*/.mozilla/firefox/*.default-release/user.js)"
