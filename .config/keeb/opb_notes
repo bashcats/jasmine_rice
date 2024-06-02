@@ -1,0 +1,29 @@
+### on-board programmability
+
+<L_Shift>  ->  <Caps_Lock>
+<Esc>  ->  <L_Shift>
+<Caps Lock>  ->  <F4>
+<Down>  ->  <Up>
+<Up>  ->  <Down>
+
+-  ->  ]    # open-bracket on key:]
+]  ->  =    # equals-plus on key:=
+=  ->  ~    # close-bracket on key:~
+~  ->  <L_\>    # tilde on lh-bottom-row:ring-finger
+<Right>  ->  [    # right-arrow on key:[
+[  ->  \    # forward-slash on key:<R_\>
+\  ->  -    # <R_\> on key:-
+q  ->  z    #  dvorak:<Quotes> is located at qwerty:q
+z  ->  q    #  dvorak:<Colon> is located at qwerty:z
+
+
+### loadkeys dvorak
+
+(  [  ->  -  )  ->  ]    # open-bracket on key:]
+(  /  ->  [  )  ->  \    # forward-slash on key:<R_\>
+(  =  ->  ]  )  ->  =    # equals-plus on key:=
+(  -  ->  "  )  id  "    # minus-underscore on key:<Quotes>
+(  :  ->  z  )  ->  q    # <Colon> on key:q
+(  "  ->  q  )  ->  z    # <Quotes> on key:z
+
+

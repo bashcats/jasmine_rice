@@ -1,0 +1,16 @@
+59c59
+< keycode  66 = Super_L NoSymbol Super_L
+---
+> keycode  66 = Caps_Lock NoSymbol Caps_Lock
+105c105,107
+< keycode 112 = Prior NoSymbol Prior
+---
+> clear mod4
+> add mod4 = Super_R Super_R
+> keycode 112 = Super_R NoSymbol Super_R
+127,128c129,130
+< keycode 134 = Super_R NoSymbol Super_R
+< keycode 135 = Super_R NoSymbol Super_R
+---
+> keycode 134 = NoSymbol NoSymbol NoSymbol
+> keycode 135 = Menu NoSymbol Menu
