@@ -1,18 +1,18 @@
 ### on-board programmability
 
-<Esc>  ->  <L_Shift>
 <L_Shift>  ->  <Caps_Lock>
+<Esc>  ->  <L_Shift>
 <Caps Lock>  ->  <F4>
 <Down>  ->  <Up>
 <Up>  ->  <Down>
 
 -  ->  ]    # open-bracket on key:]
 ]  ->  =    # equals-plus on key:=
-=  ->  ~    # close-bracket on key:<`/~>
-~  ->  -    # tilde on key:-
+=  ->  ~    # close-bracket on key:~
+~  ->  <L_\>    # tilde on lh-bottom-row:ring-finger
 <Right>  ->  [    # right-arrow on key:[
-[  ->  <R_\>    # forward-slash on key:<R_\>
-\  ->  <L_\>    # <R_\> on key:<L_\>
+[  ->  \    # forward-slash on key:<R_\>
+\  ->  -    # <R_\> on key:-
 q  ->  z    #  dvorak:<Quotes> is located at qwerty:q
 z  ->  q    #  dvorak:<Colon> is located at qwerty:z
 
